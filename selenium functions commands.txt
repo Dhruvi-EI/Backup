@@ -1,0 +1,31 @@
+1) To switch the current window
+>>driver.switch_to.window(self.driver.window_handles[1])
+
+2)To switch back to parent window
+>>parent_window = driver.current_window_handle
+  driver.switch_to.window(parent_window)
+
+3)Actionchains
+>>action = ActionChains(driver)
+  Actionchain functions:
+	1)for moving the cursor to the particular element(Note:cursor movement is not visible)
+		>>action.move_to_element(variable_name where the xpath is stored).perform()
+	
+	2)for right click
+		>>actionChains.context_click(variable_name where the xpath is stored).perform()
+	
+	3)for double click
+		>>actionChains.double_click(variable_name where the xpath is stored).perform()
+
+4)Alert
+>>alert = Alert(driver)
+
+some commonly used functions of selenium are:
+.is_selected()
+.click()
+.is_displayed()
+.get_attribute()
+.send_keys()
+.location_once_scrolled_into_view
+.text
+.value_of_css_property() #to fetch color 

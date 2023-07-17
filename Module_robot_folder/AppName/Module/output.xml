@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.0 on win32)" generated="20230424 14:30:39.814" rpa="false" schemaversion="2">
+<suite id="s1" name="Testcase Redbus" source="C:\Users\158410\OneDrive - Arrow Electronics, Inc\Desktop\Module_robot_folder\AppName\Module\testcase_redbus.robot">
+<kw name="Open the browser3" library="Testcase_common_keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url3}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230424 14:30:40.020" level="INFO">Opening browser 'Chrome' to base url 'https://www.redbus.in/'.</msg>
+<status status="PASS" starttime="20230424 14:30:40.012" endtime="20230424 14:30:44.062"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230424 14:30:44.062" endtime="20230424 14:30:44.184"/>
+</kw>
+<status status="PASS" starttime="20230424 14:30:40.012" endtime="20230424 14:30:44.184"/>
+</kw>
+<test id="s1-t1" name="Validate Red Bus website">
+<kw name="Enter The Destinations And Dates And Search For The Buses" library="Testcase_common_keywords">
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20230424 14:30:44.184" endtime="20230424 14:30:44.184"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${RedBusLogo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230424 14:30:44.192" endtime="20230424 14:30:44.243"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" starttime="20230424 14:30:44.243" endtime="20230424 14:30:44.249"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=input[data-message='Please enter a source city']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230424 14:30:44.249" level="INFO">Clicking element 'css=input[data-message='Please enter a source city']'.</msg>
+<status status="PASS" starttime="20230424 14:30:44.249" endtime="20230424 14:30:44.296"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=input[data-message='Please enter a source city']</arg>
+<arg>Paldi</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230424 14:30:44.296" level="INFO">Typing text 'Paldi' into text field 'css=input[data-message='Please enter a source city']'.</msg>
+<status status="PASS" starttime="20230424 14:30:44.296" endtime="20230424 14:30:44.378"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=input[data-message='Please enter a destination city']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230424 14:30:44.379" level="INFO">Clicking element 'css=input[data-message='Please enter a destination city']'.</msg>
+<status status="PASS" starttime="20230424 14:30:44.379" endtime="20230424 14:30:44.440"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=input[data-message='Please enter a destination city']</arg>
+<arg>bharuch</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230424 14:30:44.441" level="INFO">Typing text 'bharuch' into text field 'css=input[data-message='Please enter a destination city']'.</msg>
+<status status="PASS" starttime="20230424 14:30:44.440" endtime="20230424 14:30:44.512"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=input[id='onward_cal']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230424 14:30:44.512" level="INFO">Clicking element 'css=input[id='onward_cal']'.</msg>
+<status status="PASS" starttime="20230424 14:30:44.512" endtime="20230424 14:30:44.579"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css=tr[class='rb-monthHeader']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230424 14:30:44.579" endtime="20230424 14:30:44.621"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//td[@class='wd day'])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230424 14:30:44.621" level="INFO">Clicking element '(//td[@class='wd day'])[1]'.</msg>
+<status status="PASS" starttime="20230424 14:30:44.621" endtime="20230424 14:30:44.737"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@id='search_btn']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230424 14:30:44.737" level="INFO">Clicking element '//button[@id='search_btn']'.</msg>
+<status status="PASS" starttime="20230424 14:30:44.737" endtime="20230424 14:30:44.846"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230424 14:30:46.855" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230424 14:30:44.846" endtime="20230424 14:30:46.855"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:div[class='onward-modify-btn g-button clearfix fl']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230424 14:30:49.229" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=112.0.5615.138)
+</msg>
+<status status="FAIL" starttime="20230424 14:30:49.221" endtime="20230424 14:30:49.229"/>
+</kw>
+<msg timestamp="20230424 14:30:49.229" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=112.0.5615.138)
+</msg>
+<msg timestamp="20230424 14:30:49.246" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=112.0.5615.138)
+</msg>
+<status status="FAIL" starttime="20230424 14:30:46.855" endtime="20230424 14:30:49.248"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=div[class='onward-modify-btn g-button clearfix fl']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230424 14:30:49.249" endtime="20230424 14:30:49.249"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=input[id='dest']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230424 14:30:49.250" endtime="20230424 14:30:49.250"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=input[id='dest']</arg>
+<arg>Surat</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230424 14:30:49.250" endtime="20230424 14:30:49.250"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=button[class=' button ms-btn']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230424 14:30:49.250" endtime="20230424 14:30:49.250"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230424 14:30:49.250" endtime="20230424 14:30:49.250"/>
+</kw>
+<status status="FAIL" starttime="20230424 14:30:44.184" endtime="20230424 14:30:49.251"/>
+</kw>
+<status status="FAIL" starttime="20230424 14:30:44.184" endtime="20230424 14:30:49.251">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=112.0.5615.138)
+</status>
+</test>
+<kw name="Close Browser Session" library="Testcase_common_keywords" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230424 14:30:49.253" endtime="20230424 14:30:51.439"/>
+</kw>
+<status status="PASS" starttime="20230424 14:30:49.253" endtime="20230424 14:30:51.439"/>
+</kw>
+<status status="FAIL" starttime="20230424 14:30:39.821" endtime="20230424 14:30:51.439"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testcase Redbus">Testcase Redbus</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230424 14:30:40.008" level="WARN">Imported resource file 'C:\Users\158410\OneDrive - Arrow Electronics, Inc\Desktop\Module_robot_folder\Common\Testcase_labels.robot' is empty.</msg>
+<msg timestamp="20230424 14:30:40.012" level="WARN">Imported library 'C:\Users\158410\OneDrive - Arrow Electronics, Inc\Desktop\Module_robot_folder\Common\ExtendedLibrary.py' contains no keywords.</msg>
+<msg timestamp="20230424 14:30:49.229" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=112.0.5615.138)
+</msg>
+</errors>
+</robot>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.0 on win32)" generated="20230714 12:35:24.705" rpa="false" schemaversion="2">
+<suite id="s1" name="Testcase Amazon" source="C:\Users\158410\OneDrive - Arrow Electronics, Inc\Desktop\RobotFramework2\AMAZON\Appname\Module\testcase_amazon.robot">
+<kw name="Open the browser" library="testcase_common_keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230714 12:35:25.062" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.in/'.</msg>
+<status status="PASS" starttime="20230714 12:35:25.062" endtime="20230714 12:35:28.725"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230714 12:35:28.725" endtime="20230714 12:35:28.886"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230714 12:35:30.895" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230714 12:35:28.886" endtime="20230714 12:35:30.895"/>
+</kw>
+<status status="PASS" starttime="20230714 12:35:25.062" endtime="20230714 12:35:30.895"/>
+</kw>
+<test id="s1-t1" name="Validate Press Keys Keywords">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${Dict1}</var>
+<arg>a</arg>
+<arg>1</arg>
+<arg>b</arg>
+<arg>2</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230714 12:35:30.895" level="INFO">${Dict1} = {'a': '1', 'b': '2'}</msg>
+<status status="PASS" starttime="20230714 12:35:30.895" endtime="20230714 12:35:30.895"/>
+</kw>
+<kw name="Convert To Dictionary" library="Collections">
+<var>${items}</var>
+<arg>${Dict1}</arg>
+<doc>Converts the given ``item`` to a Python ``dict`` type.</doc>
+<msg timestamp="20230714 12:35:30.895" level="INFO">${items} = {'a': '1', 'b': '2'}</msg>
+<status status="PASS" starttime="20230714 12:35:30.895" endtime="20230714 12:35:30.895"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${items}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230714 12:35:30.895" endtime="20230714 12:35:30.895"/>
+</kw>
+<for flavor="IN">
+<var>${i}</var>
+<var>${j}</var>
+<value>@{items.keys()}</value>
+<value>@{items.values()}</value>
+<iter>
+<var name="${i}">a</var>
+<var name="${j}">b</var>
+<kw name="Log" library="BuiltIn">
+<arg>the current key is:${i}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230714 12:35:30.908" level="INFO">the current key is:a</msg>
+<status status="PASS" starttime="20230714 12:35:30.908" endtime="20230714 12:35:30.908"/>
+</kw>
+<status status="PASS" starttime="20230714 12:35:30.907" endtime="20230714 12:35:30.908"/>
+</iter>
+<iter>
+<var name="${i}">1</var>
+<var name="${j}">2</var>
+<kw name="Log" library="BuiltIn">
+<arg>the current key is:${i}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230714 12:35:30.909" level="INFO">the current key is:1</msg>
+<status status="PASS" starttime="20230714 12:35:30.909" endtime="20230714 12:35:30.910"/>
+</kw>
+<status status="PASS" starttime="20230714 12:35:30.909" endtime="20230714 12:35:30.910"/>
+</iter>
+<status status="PASS" starttime="20230714 12:35:30.895" endtime="20230714 12:35:30.910"/>
+</for>
+<tag>robot</tag>
+<tag>suite</tag>
+<status status="PASS" starttime="20230714 12:35:30.895" endtime="20230714 12:35:30.911"/>
+</test>
+<kw name="Close Browser session" library="testcase_common_keywords" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230714 12:35:30.916" endtime="20230714 12:35:33.133"/>
+</kw>
+<status status="PASS" starttime="20230714 12:35:30.916" endtime="20230714 12:35:33.133"/>
+</kw>
+<status status="PASS" starttime="20230714 12:35:24.710" endtime="20230714 12:35:33.133"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">robot</stat>
+<stat pass="1" fail="0" skip="0">suite</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testcase Amazon">Testcase Amazon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

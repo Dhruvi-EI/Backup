@@ -1,0 +1,20 @@
+def test_ganpat_logo(): return "//img[@loading='lazy']"
+def test_header(i): return "// ul[ @ id = 'nav'] // a[text()='"+i+"']"
+def click_campusLife(): return "//a[text()='Campus Life']"
+def gallery(): return "//h2[text()='  Gallery ']"
+def image_count(): return "/div[@class='card-columns']//img"
+def print_href(): return "//div[@class='card-columns']//img"
+def validateNewslater(): return "//h3[text()='Do you want notification?']"
+
+def validateEMailText():return "//input[@placeholder='Enter Your Email Here']"
+def subscribeClick():return "//button[text()='Subscribe']","//strong[text()='The email field is required.']"
+
+def international():return "// ul[ @ id = 'nav'] // a[text()='International']"
+
+def courseyears():return "(//div[@class='card my-3']/div[2]//p[@class='course-details-content mb-0'])[1]"
+def documentation_logo():return "(//img[@alt='GNU'])[2]"
+def international_applybutton():    return "((//div[@class='card my-3'])[1]//a)[2]"
+def pagination():    return "(//ul[@class='pagination pagination-sm']//a)[2]"
+def assianfees():    return "((//div[@class='card my-3'])[1]//p[text()='₹ 43000'])[2]"
+def internationalfees():    return "((//div[@class='card my-3'])[1]//p[text()='$ 2000'])[2]"
+def international_viewdetails():    return "((//div[@class='card my-3'])[1]//a)[1]"

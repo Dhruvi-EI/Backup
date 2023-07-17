@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.0 on win32)" generated="20230413 15:38:05.986" rpa="false" schemaversion="2">
+<suite id="s1" name="Practice" source="C:\Users\158410\OneDrive - Arrow Electronics, Inc\Desktop\practice\practice.robot">
+<test id="s1-t1" name="Validate">
+<kw name="open the browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://intranet.einfochips.com/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230413 15:38:06.264" level="INFO">Opening browser 'Chrome' to base url 'https://intranet.einfochips.com/'.</msg>
+<status status="PASS" starttime="20230413 15:38:06.264" endtime="20230413 15:38:10.745"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230413 15:38:10.745" endtime="20230413 15:38:10.905"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230413 15:38:14.909" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230413 15:38:10.905" endtime="20230413 15:38:14.909"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:06.264" endtime="20230413 15:38:14.910"/>
+</kw>
+<kw name="Intranet">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>//div[@class='row row-eq-height last-cards mrgn-btm-15']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230413 15:38:14.911" endtime="20230413 15:38:15.773"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230413 15:38:18.785" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230413 15:38:15.773" endtime="20230413 15:38:18.785"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${Elements}</var>
+<arg>//div[@class='usr-name']/a[@title='click to view profile']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230413 15:38:18.805" level="INFO">${Elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="900bffff-ffae-413e-ad93-2ecb7f99d295")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20230413 15:38:18.785" endtime="20230413 15:38:18.805"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>@{Birthday_list}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20230413 15:38:18.805" level="INFO">@{Birthday_list} = [ ]</msg>
+<status status="PASS" starttime="20230413 15:38:18.805" endtime="20230413 15:38:18.805"/>
+</kw>
+<for flavor="IN">
+<var>${Element}</var>
+<value>@{Elements}</value>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="900bffff-ffae-413e-ad93-2ecb7f99d295")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:18.829" level="INFO">Govind Soni</msg>
+<status status="PASS" starttime="20230413 15:38:18.805" endtime="20230413 15:38:18.829"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:18.829" endtime="20230413 15:38:18.845"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:18.805" endtime="20230413 15:38:18.845"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="4638ecc4-4ab5-434b-a2d9-718dcff586bb")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:18.861" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:18.845" endtime="20230413 15:38:18.861"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:18.861" endtime="20230413 15:38:18.877"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:18.845" endtime="20230413 15:38:18.877"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="738cdf4c-13e1-46e0-8aff-8fd642f3ec6a")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:18.893" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:18.877" endtime="20230413 15:38:18.893"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:18.893" endtime="20230413 15:38:18.901"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:18.877" endtime="20230413 15:38:18.901"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="711bf7e2-3580-4f8b-a76d-bcaa0d9f76b8")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:18.917" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:18.901" endtime="20230413 15:38:18.917"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:18.917" endtime="20230413 15:38:18.925"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:18.901" endtime="20230413 15:38:18.925"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="c1833b2b-30b0-4b1c-9520-aec6677acdc0")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:18.941" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:18.925" endtime="20230413 15:38:18.941"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:18.941" endtime="20230413 15:38:18.959"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:18.925" endtime="20230413 15:38:18.959"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="dd578330-b51a-4196-af6d-de7085af8079")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:18.975" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:18.959" endtime="20230413 15:38:18.975"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:18.975" endtime="20230413 15:38:18.983"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:18.959" endtime="20230413 15:38:18.983"/>
+</iter>
+<status status="PASS" starttime="20230413 15:38:18.805" endtime="20230413 15:38:18.983"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230413 15:38:20.987" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230413 15:38:18.983" endtime="20230413 15:38:20.987"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${Elements1}</var>
+<arg>//div[@class='usr-name']/a[@title='click to view profile']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230413 15:38:20.991" level="INFO">${Elements1} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="4638ecc4-4ab5-434b-a2d9-718dcff586bb")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20230413 15:38:20.987" endtime="20230413 15:38:20.991"/>
+</kw>
+<for flavor="IN">
+<var>${Element}</var>
+<value>@{Elements1}</value>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="4638ecc4-4ab5-434b-a2d9-718dcff586bb")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:21.019" level="INFO">Harshiddh Maniya</msg>
+<status status="PASS" starttime="20230413 15:38:20.991" endtime="20230413 15:38:21.019"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:21.019" endtime="20230413 15:38:21.024"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:20.991" endtime="20230413 15:38:21.024"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="738cdf4c-13e1-46e0-8aff-8fd642f3ec6a")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:21.038" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:21.024" endtime="20230413 15:38:21.038"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:21.038" endtime="20230413 15:38:21.054"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:21.024" endtime="20230413 15:38:21.054"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="711bf7e2-3580-4f8b-a76d-bcaa0d9f76b8")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:21.055" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:21.054" endtime="20230413 15:38:21.055"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:21.055" endtime="20230413 15:38:21.071"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:21.054" endtime="20230413 15:38:21.071"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="c1833b2b-30b0-4b1c-9520-aec6677acdc0")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:21.087" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:21.071" endtime="20230413 15:38:21.087"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:21.089" endtime="20230413 15:38:21.089"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:21.071" endtime="20230413 15:38:21.089"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="dd578330-b51a-4196-af6d-de7085af8079")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:21.110" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:21.089" endtime="20230413 15:38:21.110"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:21.110" endtime="20230413 15:38:21.121"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:21.089" endtime="20230413 15:38:21.121"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="a6b3227f-2b3e-44d6-b559-1ef69efca1c3")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:21.139" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:21.121" endtime="20230413 15:38:21.139"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:21.139" endtime="20230413 15:38:21.154"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:21.121" endtime="20230413 15:38:21.154"/>
+</iter>
+<status status="PASS" starttime="20230413 15:38:20.991" endtime="20230413 15:38:21.154"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230413 15:38:23.155" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230413 15:38:21.154" endtime="20230413 15:38:23.155"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${Elements2}</var>
+<arg>//div[@class='usr-name']/a[@title='click to view profile']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230413 15:38:23.166" level="INFO">${Elements2} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="738cdf4c-13e1-46e0-8aff-8fd642f3ec6a")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20230413 15:38:23.155" endtime="20230413 15:38:23.166"/>
+</kw>
+<for flavor="IN">
+<var>${Element}</var>
+<value>@{Elements2}</value>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="738cdf4c-13e1-46e0-8aff-8fd642f3ec6a")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:23.183" level="INFO">Satya Alapati</msg>
+<status status="PASS" starttime="20230413 15:38:23.166" endtime="20230413 15:38:23.183"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:23.183" endtime="20230413 15:38:23.200"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:23.166" endtime="20230413 15:38:23.200"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="711bf7e2-3580-4f8b-a76d-bcaa0d9f76b8")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:23.208" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:23.200" endtime="20230413 15:38:23.208"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:23.208" endtime="20230413 15:38:23.224"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:23.200" endtime="20230413 15:38:23.224"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="c1833b2b-30b0-4b1c-9520-aec6677acdc0")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:23.240" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:23.224" endtime="20230413 15:38:23.240"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:23.240" endtime="20230413 15:38:23.256"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:23.224" endtime="20230413 15:38:23.256"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="dd578330-b51a-4196-af6d-de7085af8079")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:23.272" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:23.256" endtime="20230413 15:38:23.272"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:23.272" endtime="20230413 15:38:23.280"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:23.256" endtime="20230413 15:38:23.280"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="a6b3227f-2b3e-44d6-b559-1ef69efca1c3")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:23.290" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:23.280" endtime="20230413 15:38:23.290"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:23.290" endtime="20230413 15:38:23.307"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:23.280" endtime="20230413 15:38:23.307"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="3d81282f-eaf4-418a-adf0-aececb94817f")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:23.324" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:23.307" endtime="20230413 15:38:23.324"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:23.324" endtime="20230413 15:38:23.332"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:23.307" endtime="20230413 15:38:23.332"/>
+</iter>
+<status status="PASS" starttime="20230413 15:38:23.166" endtime="20230413 15:38:23.332"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230413 15:38:25.338" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230413 15:38:23.332" endtime="20230413 15:38:25.338"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${Elements3}</var>
+<arg>//div[@class='usr-name']/a[@title='click to view profile']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230413 15:38:25.346" level="INFO">${Elements3} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="711bf7e2-3580-4f8b-a76d-bcaa0d9f76b8")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20230413 15:38:25.338" endtime="20230413 15:38:25.346"/>
+</kw>
+<for flavor="IN">
+<var>${Element}</var>
+<value>@{Elements3}</value>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="711bf7e2-3580-4f8b-a76d-bcaa0d9f76b8")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:25.356" level="INFO">Dilip Patel</msg>
+<status status="PASS" starttime="20230413 15:38:25.346" endtime="20230413 15:38:25.356"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:25.356" endtime="20230413 15:38:25.366"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:25.346" endtime="20230413 15:38:25.366"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="c1833b2b-30b0-4b1c-9520-aec6677acdc0")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:25.381" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:25.366" endtime="20230413 15:38:25.381"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:25.381" endtime="20230413 15:38:25.389"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:25.366" endtime="20230413 15:38:25.389"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="dd578330-b51a-4196-af6d-de7085af8079")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:25.405" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:25.389" endtime="20230413 15:38:25.405"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:25.405" endtime="20230413 15:38:25.417"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:25.389" endtime="20230413 15:38:25.417"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="a6b3227f-2b3e-44d6-b559-1ef69efca1c3")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:25.433" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:25.417" endtime="20230413 15:38:25.433"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:25.433" endtime="20230413 15:38:25.452"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:25.417" endtime="20230413 15:38:25.452"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="3d81282f-eaf4-418a-adf0-aececb94817f")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:25.463" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:25.452" endtime="20230413 15:38:25.463"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:25.463" endtime="20230413 15:38:25.471"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:25.452" endtime="20230413 15:38:25.471"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="2e4a0961-0c29-49d6-a4b4-614349a35950")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:25.491" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:25.471" endtime="20230413 15:38:25.491"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:25.491" endtime="20230413 15:38:25.500"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:25.471" endtime="20230413 15:38:25.500"/>
+</iter>
+<status status="PASS" starttime="20230413 15:38:25.346" endtime="20230413 15:38:25.500"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230413 15:38:27.500" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230413 15:38:25.500" endtime="20230413 15:38:27.500"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${Elements4}</var>
+<arg>//div[@class='usr-name']/a[@title='click to view profile']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230413 15:38:27.513" level="INFO">${Elements4} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="c1833b2b-30b0-4b1c-9520-aec6677acdc0")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20230413 15:38:27.500" endtime="20230413 15:38:27.513"/>
+</kw>
+<for flavor="IN">
+<var>${Element}</var>
+<value>@{Elements4}</value>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="c1833b2b-30b0-4b1c-9520-aec6677acdc0")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:27.526" level="INFO">Hrishi Patel</msg>
+<status status="PASS" starttime="20230413 15:38:27.513" endtime="20230413 15:38:27.534"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:27.534" endtime="20230413 15:38:27.548"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:27.513" endtime="20230413 15:38:27.548"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="dd578330-b51a-4196-af6d-de7085af8079")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:27.561" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:27.548" endtime="20230413 15:38:27.561"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:27.561" endtime="20230413 15:38:27.569"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:27.548" endtime="20230413 15:38:27.569"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="a6b3227f-2b3e-44d6-b559-1ef69efca1c3")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:27.588" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:27.569" endtime="20230413 15:38:27.588"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:27.588" endtime="20230413 15:38:27.600"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:27.569" endtime="20230413 15:38:27.600"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="3d81282f-eaf4-418a-adf0-aececb94817f")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:27.615" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:27.600" endtime="20230413 15:38:27.615"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:27.615" endtime="20230413 15:38:27.623"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:27.600" endtime="20230413 15:38:27.623"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="2e4a0961-0c29-49d6-a4b4-614349a35950")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:27.639" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:27.623" endtime="20230413 15:38:27.639"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:27.639" endtime="20230413 15:38:27.658"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:27.623" endtime="20230413 15:38:27.658"/>
+</iter>
+<iter>
+<var name="${Element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ded6d155f7f0eccbf12cb87dae146bb1", element="35f750f1-36d5-412d-9ba8-1f26f83967ab")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${Element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:27.678" level="INFO"/>
+<status status="PASS" starttime="20230413 15:38:27.658" endtime="20230413 15:38:27.678"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Birthday_list}</arg>
+<arg>${Element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230413 15:38:27.678" endtime="20230413 15:38:27.686"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:27.658" endtime="20230413 15:38:27.686"/>
+</iter>
+<status status="PASS" starttime="20230413 15:38:27.513" endtime="20230413 15:38:27.686"/>
+</for>
+<kw name="Log" library="BuiltIn">
+<arg>${Birthday_list}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230413 15:38:27.694" level="INFO">['Govind Soni', '', '', '', '', '', 'Harshiddh Maniya', '', '', '', '', '', 'Satya Alapati', '', '', '', '', '', 'Dilip Patel', '', '', '', '', '', 'Hrishi Patel', '', '', '', '', '']</msg>
+<status status="PASS" starttime="20230413 15:38:27.686" endtime="20230413 15:38:27.694"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230413 15:38:27.694" endtime="20230413 15:38:29.848"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:14.911" endtime="20230413 15:38:29.848"/>
+</kw>
+<status status="PASS" starttime="20230413 15:38:06.250" endtime="20230413 15:38:29.848"/>
+</test>
+<status status="PASS" starttime="20230413 15:38:05.988" endtime="20230413 15:38:29.848"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Practice">Practice</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

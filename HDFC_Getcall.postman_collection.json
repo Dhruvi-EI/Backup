@@ -1,0 +1,473 @@
+{
+	"info": {
+		"_postman_id": "c3bf5219-a18b-4ab9-bc5f-40db7ea062c3",
+		"name": "HDFC_Getcall",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26222051"
+	},
+	"item": [
+		{
+			"name": "facebook",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.facebook.com",
+					"protocol": "https",
+					"host": [
+						"www",
+						"facebook",
+						"com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "google",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://google.com",
+					"protocol": "https",
+					"host": [
+						"google",
+						"com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "twitter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://twitter.com",
+					"protocol": "https",
+					"host": [
+						"twitter",
+						"com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reqres_get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData=pm.response.json();\r",
+							"console.log(jsonData);\r",
+							"\r",
+							"console.log(typeof jasonData.data[2].id);\r",
+							"pm.test(\"Validate id is 2\", function () {   \r",
+							"     pm.expect(jsonData.data[2].id).to.be.eq(9)\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{reqres}}/api/users?page={{cv}}\n\n",
+					"host": [
+						"{{reqres}}"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "{{cv}}\n\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reqres_post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"{{name_value}}\",\r\n    \"job\": \"leader\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{reqres}}/api/users",
+					"host": [
+						"{{reqres}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "soap_num_to_words",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"check for ==> status code text as OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"fifty nine\");\r",
+							"});\r",
+							"\r",
+							"//var xmlObj=xml2Json(responseBody);\r",
+							"//tests[\"check for expected value\"]=xmlObj['soap:Envelope']['soap:Body']['m:NumberToWordsResponse']['m:NumberToWordsResult']=='two hundred'\r",
+							"//var theExpandedNumber=xmlObj['soap:Envelope']['soap:Body']['m:NumberToWordsResponse']['m:NumberToWordsResult']\r",
+							"//console.log(theExpandedNumber)\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml; charset=utf-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <NumberToWords xmlns=\"http://www.dataaccess.com/webservicesserver/\">\r\n      <ubiNum>59</ubiNum>\r\n    </NumberToWords>\r\n  </soap:Body>\r\n</soap:Envelope>"
+				},
+				"url": {
+					"raw": "https://www.dataaccess.com/webservicesserver/NumberConversion.wso",
+					"protocol": "https",
+					"host": [
+						"www",
+						"dataaccess",
+						"com"
+					],
+					"path": [
+						"webservicesserver",
+						"NumberConversion.wso"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "soap_cel_to_farenheit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/soap+xml; charset=utf-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\r\n  <soap12:Body>\r\n    <CelsiusToFahrenheit xmlns=\"https://www.w3schools.com/xml/\">\r\n      <Celsius>20</Celsius>\r\n    </CelsiusToFahrenheit>\r\n  </soap12:Body>\r\n</soap12:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.w3schools.com/xml/tempconvert.asmx",
+					"protocol": "https",
+					"host": [
+						"www",
+						"w3schools",
+						"com"
+					],
+					"path": [
+						"xml",
+						"tempconvert.asmx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pet_id_post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": {{petId}},\r\n    \"category\": {\r\n        \"id\": 10,\r\n        \"name\": \"string\"\r\n    },\r\n    \"name\": \"{{pet_name}}\",\r\n    \"photoUrls\": [\r\n        \"string\"\r\n    ],\r\n    \"tags\": [\r\n        {\r\n            \"id\": 10,\r\n            \"name\": \"string\"\r\n        }\r\n    ],\r\n    \"status\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pet_id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": {{pet_id}},\r\n    \"category\": {\r\n        \"id\": 10,\r\n        \"name\": \"string\"\r\n    },\r\n    \"name\": \"doggie\",\r\n    \"photoUrls\": [\r\n        \"string\"\r\n    ],\r\n    \"tags\": [\r\n        {\r\n            \"id\": 10,\r\n            \"name\": \"string\"\r\n        }\r\n    ],\r\n    \"status\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet/{{petId}}",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"{{petId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pet_id_delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": {{petId}},\r\n    \"category\": {\r\n        \"id\": 10,\r\n        \"name\": \"string\"\r\n    },\r\n    \"name\": \"doggie\",\r\n    \"photoUrls\": [\r\n        \"string\"\r\n    ],\r\n    \"tags\": [\r\n        {\r\n            \"id\": 10,\r\n            \"name\": \"string\"\r\n        }\r\n    ],\r\n    \"status\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet/{{petId}}",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"{{petId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authentication",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"UNAUTHORIZED\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "pass",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://httpbin.org/basic-auth/user/passwd",
+					"protocol": "https",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"basic-auth",
+						"user",
+						"passwd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_test _cases",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData=pm.response.json();\r",
+							"console.log(jsonData);\r",
+							"// data type of id\r",
+							"console.log(typeof jsonData.data.id);\r",
+							"console.log(typeof jsonData.support.url);\r",
+							"console.log(typeof jasonData.data[2].id);\r",
+							"//--------------------------------\r",
+							"\r",
+							"pm.test(\"validate id is a number\", function () {\r",
+							"    pm.expect(jsonData.data.id).to.be.a('number');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"validate id is a string\", function () {\r",
+							"    pm.expect(jsonData.support.url).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"validate id value is 2\", function () {\r",
+							"    pm.expect(jsonData.data.id).to.eq(2);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users/2\n\n",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2\n\n"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "cv",
+			"value": "2",
+			"type": "string"
+		},
+		{
+			"key": "pet_id",
+			"value": "401",
+			"type": "string"
+		}
+	]
+}

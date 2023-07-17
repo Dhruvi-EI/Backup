@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.0 on win32)" generated="20230712 17:59:18.558" rpa="false" schemaversion="2">
+<suite id="s1" name="Testcase Practice Website" source="C:\Users\158410\OneDrive - Arrow Electronics, Inc\Desktop\RobotFramework2\PracticeWebsite\Appname\Module\testcase_practice_website.robot">
+<kw name="Open the browser" library="testcase_common_keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230712 17:59:19.011" level="INFO">Opening browser 'Chrome' to base url 'https://www.globalsqa.com/demo-site/draganddrop/'.</msg>
+<status status="PASS" starttime="20230712 17:59:19.011" endtime="20230712 17:59:24.757"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230712 17:59:24.757" endtime="20230712 17:59:24.885"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${logo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230712 17:59:24.885" endtime="20230712 17:59:24.969"/>
+</kw>
+<status status="PASS" starttime="20230712 17:59:19.011" endtime="20230712 17:59:24.969"/>
+</kw>
+<test id="s1-t1" name="Validate Practice Automation Website">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>(//h5[@class='ui-widget-header'])[1]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230712 17:59:30.163" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230712 17:59:30.027" endtime="20230712 17:59:30.163"/>
+</kw>
+<msg timestamp="20230712 17:59:30.195" level="FAIL">Element '(//h5[@class='ui-widget-header'])[1]' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20230712 17:59:24.970" endtime="20230712 17:59:30.195"/>
+</kw>
+<kw name="Drag And Drop" library="SeleniumLibrary">
+<arg>(//h5[@class='ui-widget-header'])[1]</arg>
+<arg>css=div[class='ui-widget-content ui-state-default ui-droppable']</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="NOT RUN" starttime="20230712 17:59:30.196" endtime="20230712 17:59:30.196"/>
+</kw>
+<status status="FAIL" starttime="20230712 17:59:24.969" endtime="20230712 17:59:30.197">Element '(//h5[@class='ui-widget-header'])[1]' not visible after 5 seconds.</status>
+</test>
+<kw name="Close Browser session" library="testcase_common_keywords" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230712 17:59:30.198" endtime="20230712 17:59:32.379"/>
+</kw>
+<status status="PASS" starttime="20230712 17:59:30.198" endtime="20230712 17:59:32.379"/>
+</kw>
+<status status="FAIL" starttime="20230712 17:59:18.559" endtime="20230712 17:59:32.379"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testcase Practice Website">Testcase Practice Website</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230712 17:59:19.007" level="WARN">Imported resource file 'C:\Users\158410\OneDrive - Arrow Electronics, Inc\Desktop\RobotFramework2\PracticeWebsite\Common\testcase_labels.robot' is empty.</msg>
+</errors>
+</robot>
