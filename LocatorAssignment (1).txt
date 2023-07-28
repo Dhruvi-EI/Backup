@@ -1,0 +1,133 @@
+Open https://www.amazon.in/ and find the locators for below elements:
+
+1.amazon.in logo
+>> a[id='nav-logo-sprites']
+
+2.Search Amazon.in text box
+>> input[id='twotabsearchtextbox']
+
+3.Click All dropdown -> Amazon Devices
+>> select[id='searchDropdownBox']
+
+4.Accounts & Lists -> Sign in button
+>> a[id='nav-link-accountList']
+
+5.Cart product count
+>> span[id='nav-cart-count']
+
+6.Today’s Deals title
+>> div[id='slot-2']
+
+7.Today’s Deals section
+>> div[id='CardInstancehxcUK68vbO7GUO_j9hOTMg']
+
+8.Today’s Deals Next button
+>> span[class='a-button-inner']
+
+9.Today’s Deals Previous button
+>> span[class='a-button-inner']
+
+10.Click Select Your Address -> Choose your location popup
+>> a[id='yaab-store-address-add-blurb_new_widget_click_here_link']
+
+11.Sponsered icon
+>> span[id='ad-feedback-text-right-2']
+
+12.Leave Feedback popup
+>> div[class='af-desktop-formContents']
+
+13.Leave Feedback -> Submit button
+>> span#af-feedback-form-submit-button-announce
+
+14.Leave Feedback -> Cancel button
+>> span[id='af-feedback-form-cancel-button-announce']
+
+15.Leave Feedback -> Not relevant check box
+>> input[name^='ccs-af-rating-option']
+
+16.Leave Feedback -> Please tell us why textbox
+>> textarea[id='af-free-text']
+
+17.Leave Feedback -> Close icon
+>>header[class='a-popover-header']>h4[id='a-popover-header-1+button']
+
+
+
+Open Intranet.einfochips.com and find locators for below elements:
+1.Workday link
+>> a[href^='https://www.myworkday.com/arrow/login.htmld']
+
+2.PMS link
+>> a[href^='https://intranet.einfochips.com/employee_intranet/portal/user/loading']
+
+3.Wishing you box
+>> div[class='wishing-wrapper']
+
+4.Wishing you box -> View all birthdays
+>> a[href^='https://intranet.einfochips.com/employee_intranet/portal/event/birthday/index']
+
+5.Wishing you box -> View all aniversaries
+>> a[href^='https://intranet.einfochips.com/employee_intranet/portal/event/anniversary/index']
+
+6.Intranet -> Logout button
+>> a[href^='https://intranet.einfochips.com/employee_intranet/portal/auth/logout']
+
+7.Intranet -> Username link
+>> a[href^='https://intranet.einfochips.com/employee_intranet/portal/user/myinfo']
+
+8.Intranet -> Username -> Yourtrainings -> Details -> Training History popup
+>> div[class='modal-body']
+
+9.Intranet -> Username -> Yourtrainings -> Details -> Close icon
+>> button[class='close']
+
+10.Corporate tie up section
+>> ul[class='demo3']
+
+11.Social Media Shareathon Updates
+>> ul[class='demo2']
+
+12.Home dropdown -> Office Addresses
+>> a[href^='https://intranet.einfochips.com/employee_intranet/portal/address/all']
+
+13.Home dropdown -> Holiday List
+>> a[href^='https://intranet.einfochips.com/employee_intranet/portal/leave/holidaylist']
+
+14.Home dropdown -> Holiday List -> Table
+>> table[id='mt']
+
+15.Home dropdown -> Holiday List -> Table headers
+>> table[id='mt']>thead
+
+16.Home dropdown -> Holiday List -> Table -> Branchname Column
+>> table[id='mt'] td[data-title='Brabch Name']
+
+17.Home dropdown -> Holiday List -> Table -> Date Column
+>> table[id='mt'] td[data-title='Date']
+
+18.Home dropdown -> Holiday List -> Table -> Day Column
+>> table[id='mt'] td[data-title='Day']
+
+19.Home dropdown -> Holiday List -> Table -> Description Column
+>> table[id='mt']td[data-title='Description']
+
+20.Home dropdown -> Holiday List -> Table -> Holiday Type Column
+>> table[id='mt'] td[data-title='Description']
+
+21.Home dropdown -> Holiday List -> Table -> First Row
+>> table[id='mt']>thead+tbody>tr
+
+22.Home dropdown -> Holiday List -> Pagination
+>> div[id='green1']>ul
+
+23.Home dropdown -> Holiday List -> Year Select dropdown
+>> select[id='holiday_year']
+
+24.Home dropdown -> Holiday List -> Branchname dropdown
+>> select[id='branch_id']
+
+25.Home dropdown -> Holiday List -> Month dropdown
+>> select[id='month_id']
+
+26.Home dropdown -> Holiday List -> Submit button
+>> button[id='btn_submit_holiday']

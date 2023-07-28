@@ -1,0 +1,67 @@
+Terms used in Scrum Framework:
+
+Scrum is an agile project management framework that helps teams structure and manage their work through a set of values, principles, and practices.
+
+1. Product Backlog(Definition of ready):
+	A product backlog is a prioritized list of work for the development team that is derived from the roadmap and its requirements.
+	Like new features, bug fixes, improvements, changes to existing features, and other product initiatives.
+	product owner owns product backlog.
+
+2.Sprint planning:
+ 	Sprint planning is an event in scrum that kicks off the sprint.
+	The purpose of sprint planning is to define what can be delivered in the sprint and how that work will be achieved.
+	Sprint planning is done in collaboration with the whole scrum team.
+
+3.Sprint backlog:
+	A sprint backlog is a list of work items your team plans to complete during a project sprint.
+
+4.Daily Scrum:
+	Daily scrum meeting (called daily stand up meeting) is usually taken place every morning on each sprint, the time lasts approximately 15 minutes.
+
+5.Sprint Execution:
+	Sprint Execution starts after Sprint Planning and ends before Sprint Review. 
+	For a two-week Sprint, the duration of Sprint Execution lasts for 8 to 10 days. 
+
+6.Potentially shippable product increment:
+	A potentially shippable product increment is a completed and tested set of features that can be released to customers at any point in time.
+
+7.Sprint Review:
+	A sprint review is a collaborative meeting that is typically held at the end of every sprint.
+	This is when the team runs through work items they completed during the sprint or iteration.
+
+8.Sprint retrospective:
+	A sprint retrospective brings your scrum team together to discuss the previous sprint.
+	Like learning from past mistakes and becoming better.
+
+
+Other terms in Scrum:
+9.User Story:
+	A user story is an informal, general explanation of a software feature written from the perspective of the end user or customer.
+
+10.Increment in Scrum:
+	The Increment is an artifact from Scrum. It's essentially the latest version of the product.
+
+11.Backlog Refinement:
+	Backlog refinement, also known as backlog management or backlog grooming, 
+	is the period of time where product owners, managers, and team members review and 
+	prioritize product backlog items.
+
+12.User Stories:
+	A user story is an informal, general explanation of a software feature written from the perspective of the end user or customer.
+
+13.Planning poker:
+	Planning Poker, also called “Scrum Poker,” is a consensus-based Agile planning and estimating technique used to assess product backlogs, 
+	guessing how much time and effort is needed to complete each of the backlog’s initiatives.
+
+14.Calculate sprint velocity:
+	 divide the number of backlog items (or story points, if that's what your team uses) by the total length of your sprint in days.
+
+15.Sprint burndown chart:
+	A burndown chart shows the amount of work that has been completed in an epic or sprint, and the total work remaining
+
+16.Scrum Board:
+	A Scrum board is a visual way to manage and organize projects, breaking them down into defined “sprints” of time.
+
+*************************************************************************************************************************************************************
+	JIRA : 	JIRA IS A PROJECT MANAGEMENT TOOL
+	Jira Software provides scrum and kanban boards out-of-the-box.
