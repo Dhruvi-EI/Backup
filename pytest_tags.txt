@@ -1,0 +1,2 @@
+python -m pytest testScripts/test_google.py
+python -m pytest testScripts/test_google.py --html='testReports/google.html'
