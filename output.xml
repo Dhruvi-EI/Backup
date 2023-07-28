@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.0 on win32)" generated="20230331 10:22:08.870" rpa="false" schemaversion="2">
+<suite id="s1" name="New" source="C:\Users\158410\PycharmProjects\main\new.robot">
+<test id="s1-t1" name="TC_01">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230331 10:22:09.066" level="INFO">Opening browser 'Chrome' to base url 'https://www.w3schools.com/quiztest/quiztest.asp?qtest=CSS'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230331 10:22:11.665" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20230331 10:22:11.665" endtime="20230331 10:22:11.665"/>
+</kw>
+<msg timestamp="20230331 10:22:11.668" level="FAIL">WebDriverException: Message: unknown error: cannot find Chrome binary
+</msg>
+<status status="FAIL" starttime="20230331 10:22:09.066" endtime="20230331 10:22:11.668"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230331 10:22:11.669" endtime="20230331 10:22:11.669"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20230331 10:22:11.670" endtime="20230331 10:22:11.670"/>
+</kw>
+<status status="FAIL" starttime="20230331 10:22:09.064" endtime="20230331 10:22:11.671">WebDriverException: Message: unknown error: cannot find Chrome binary
+</status>
+</test>
+<status status="FAIL" starttime="20230331 10:22:08.872" endtime="20230331 10:22:11.673"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="New">New</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
