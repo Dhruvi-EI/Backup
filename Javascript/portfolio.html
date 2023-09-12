@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>replit</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <script src="portfolio_script.js"></script>
+            <title>Dhruvi Portfolio
+            </title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="left">Dhruvi's Portfolio</div>
+                <div class="right">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/">About</a></li>
+                        <li><a href="/">Services</a></li>
+                        <li><a href="/">Projects</a></li>
+                        <li><a href="/">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </body>
+    <body>
+        <header>
+        </header>
+        <main>
+            <section class="firstSection">
+                <div class="leftSection"> Hey! This is <span class="purple">Dhruvi!</span>
+                    <div>This is my Portfolio website. </div>
+                    <span id="element"></span>
+                    <div class="buttons">
+                        <!-- <button  type="button" class="btn">Upload Resume</button> -->
+                        <input type="file" class="file" id="attachment" style="display: none;" onchange="fileSelected(this)"/>
+                        <input type="button" class="file" id="btnAttachment" onclick="openAttachment()" value="Upload Resume"/>
+
+                        <button onclick="location.href='https://github.com/'" class="btn">Github Link</button>
+                    </div>
+                </div>
+                <div class="rightSection">
+                    <img src="d2.jpg" alt="">
+                </div>
+            </section>
+            <hr>
+            <section><div class="secondSection">
+                <div class="text-violet">What I have done so far</div>
+                <h1>Work Experiences</h1>
+                <div class="box">
+                    <div class="vertical">
+                        <img class="image-top" src="d3.jpg" alt="">
+                        <div class="vertical-title">
+                            BE in EC Engineering (2019-2023)
+                        </div>
+                        <div class="vertical-desc">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.  
+                        </div>
+                    </div>
+                    <div class="vertical">
+                        <img class="image-top" src="node.jpg" alt="">
+                        <div class="vertical-title">
+                            Node.js Developer
+                        </div>
+                        <div class="vertical-desc">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </div>
+                    </div>
+                    <div class="vertical">
+                        <img class="image-top" src="android.jpg" alt="">
+                        <div class="vertical-title">
+                            Android Developer
+                        </div>
+                        <div class="vertical-desc">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </div>
+                    </div>
+                    <div class="vertical">
+                        <img class="image-top" src="automation.jpg" alt="">
+                        <div class="vertical-title">
+                            Automation(QA)
+                        </div>
+                        <div class="vertical-desc">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </section>
+            <footer>
+                <div class="footer">
+                    <div class="footer-first">
+                        <h3>Dhruvi's Developer Portfolio</h3>
+                    </div>
+                    <div class="footer-second">
+                        <ul>
+                            <li>Home</li>
+                            <li>Services</li>
+                            <li>About</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                    <div class="footer-third">
+                        <ul>
+                            <li>Home</li>
+                            <li>Services</li>
+                            <li>About</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                    <div class="footer-fourth">
+                        <ul>
+                            <li>Home</li>
+                            <li>Services</li>
+                            <li>About</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-rights">
+                    Copyright &#169dhruviportfolio.com | All rights reserved
+                </div>
+            </footer>
+        </main>
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <script>
+            var typed = new Typed('#element', {
+              strings: ['<i>Automation</i>.', '<i>Devops</i>.' ,'<i>&amp; Developer.</i>'],
+              typeSpeed: 50,
+            });
+          </script>
+    </body>
+</html>

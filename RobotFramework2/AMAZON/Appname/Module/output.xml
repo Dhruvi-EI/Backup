@@ -1,97 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1 (Python 3.9.0 on win32)" generated="20230714 12:35:24.705" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1 (Python 3.9.0 on win32)" generated="20230726 14:20:28.708" rpa="false" schemaversion="2">
 <suite id="s1" name="Testcase Amazon" source="C:\Users\158410\OneDrive - Arrow Electronics, Inc\Desktop\RobotFramework2\AMAZON\Appname\Module\testcase_amazon.robot">
 <kw name="Open the browser" library="testcase_common_keywords" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230714 12:35:25.062" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.in/'.</msg>
-<status status="PASS" starttime="20230714 12:35:25.062" endtime="20230714 12:35:28.725"/>
+<msg timestamp="20230726 14:20:28.926" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.in/'.</msg>
+<status status="PASS" starttime="20230726 14:20:28.926" endtime="20230726 14:20:32.628"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230714 12:35:28.725" endtime="20230714 12:35:28.886"/>
+<status status="PASS" starttime="20230726 14:20:32.628" endtime="20230726 14:20:32.830"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230714 12:35:30.895" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230714 12:35:28.886" endtime="20230714 12:35:30.895"/>
+<msg timestamp="20230726 14:20:34.836" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230726 14:20:32.831" endtime="20230726 14:20:34.836"/>
 </kw>
-<status status="PASS" starttime="20230714 12:35:25.062" endtime="20230714 12:35:30.895"/>
+<status status="PASS" starttime="20230726 14:20:28.926" endtime="20230726 14:20:34.836"/>
 </kw>
-<test id="s1-t1" name="Validate Press Keys Keywords">
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${Dict1}</var>
+<test id="s1-t1" name="Compare Two Lists">
+<kw name="Create List" library="BuiltIn">
+<var>${Result}</var>
 <arg>a</arg>
-<arg>1</arg>
 <arg>b</arg>
-<arg>2</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20230714 12:35:30.895" level="INFO">${Dict1} = {'a': '1', 'b': '2'}</msg>
-<status status="PASS" starttime="20230714 12:35:30.895" endtime="20230714 12:35:30.895"/>
+<arg>c</arg>
+<arg>' '</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20230726 14:20:34.839" level="INFO">${Result} = ['a', 'b', 'c', "' '"]</msg>
+<status status="PASS" starttime="20230726 14:20:34.836" endtime="20230726 14:20:34.839"/>
 </kw>
-<kw name="Convert To Dictionary" library="Collections">
-<var>${items}</var>
-<arg>${Dict1}</arg>
-<doc>Converts the given ``item`` to a Python ``dict`` type.</doc>
-<msg timestamp="20230714 12:35:30.895" level="INFO">${items} = {'a': '1', 'b': '2'}</msg>
-<status status="PASS" starttime="20230714 12:35:30.895" endtime="20230714 12:35:30.895"/>
+<kw name="Create List" library="BuiltIn">
+<var>${Result1}</var>
+<arg>' '</arg>
+<arg>a</arg>
+<arg>b</arg>
+<arg>c</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20230726 14:20:34.840" level="INFO">${Result1} = ["' '", 'a', 'b', 'c']</msg>
+<status status="PASS" starttime="20230726 14:20:34.840" endtime="20230726 14:20:34.841"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${items}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230714 12:35:30.895" endtime="20230714 12:35:30.895"/>
+<kw name="List Difference">
+<var>${diff_list}</var>
+<arg>${Result}</arg>
+<arg>${Result1}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>@{NewList}</var>
+<arg>@{arg1}</arg>
+<arg>@{arg2}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20230726 14:20:34.841" level="INFO">@{NewList} = [ a | b | c | ' ' | ' ' | a | b | c ]</msg>
+<status status="PASS" starttime="20230726 14:20:34.841" endtime="20230726 14:20:34.841"/>
 </kw>
 <for flavor="IN">
-<var>${i}</var>
-<var>${j}</var>
-<value>@{items.keys()}</value>
-<value>@{items.values()}</value>
+<var>${item}</var>
+<value>@{arg1}</value>
 <iter>
-<var name="${i}">a</var>
-<var name="${j}">b</var>
-<kw name="Log" library="BuiltIn">
-<arg>the current key is:${i}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230714 12:35:30.908" level="INFO">the current key is:a</msg>
-<status status="PASS" starttime="20230714 12:35:30.908" endtime="20230714 12:35:30.908"/>
+<var name="${item}">a</var>
+<kw name="Remove Values From List" library="Collections">
+<arg>${NewList}</arg>
+<arg>${item}</arg>
+<doc>Removes all occurrences of given ``values`` from ``list``.</doc>
+<status status="PASS" starttime="20230726 14:20:34.841" endtime="20230726 14:20:34.841"/>
 </kw>
-<status status="PASS" starttime="20230714 12:35:30.907" endtime="20230714 12:35:30.908"/>
+<status status="PASS" starttime="20230726 14:20:34.841" endtime="20230726 14:20:34.841"/>
 </iter>
 <iter>
-<var name="${i}">1</var>
-<var name="${j}">2</var>
-<kw name="Log" library="BuiltIn">
-<arg>the current key is:${i}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230714 12:35:30.909" level="INFO">the current key is:1</msg>
-<status status="PASS" starttime="20230714 12:35:30.909" endtime="20230714 12:35:30.910"/>
+<var name="${item}">b</var>
+<kw name="Remove Values From List" library="Collections">
+<arg>${NewList}</arg>
+<arg>${item}</arg>
+<doc>Removes all occurrences of given ``values`` from ``list``.</doc>
+<status status="PASS" starttime="20230726 14:20:34.848" endtime="20230726 14:20:34.848"/>
 </kw>
-<status status="PASS" starttime="20230714 12:35:30.909" endtime="20230714 12:35:30.910"/>
+<status status="PASS" starttime="20230726 14:20:34.841" endtime="20230726 14:20:34.848"/>
 </iter>
-<status status="PASS" starttime="20230714 12:35:30.895" endtime="20230714 12:35:30.910"/>
+<iter>
+<var name="${item}">c</var>
+<kw name="Remove Values From List" library="Collections">
+<arg>${NewList}</arg>
+<arg>${item}</arg>
+<doc>Removes all occurrences of given ``values`` from ``list``.</doc>
+<status status="PASS" starttime="20230726 14:20:34.848" endtime="20230726 14:20:34.848"/>
+</kw>
+<status status="PASS" starttime="20230726 14:20:34.848" endtime="20230726 14:20:34.848"/>
+</iter>
+<iter>
+<var name="${item}">' '</var>
+<kw name="Remove Values From List" library="Collections">
+<arg>${NewList}</arg>
+<arg>${item}</arg>
+<doc>Removes all occurrences of given ``values`` from ``list``.</doc>
+<status status="PASS" starttime="20230726 14:20:34.848" endtime="20230726 14:20:34.848"/>
+</kw>
+<status status="PASS" starttime="20230726 14:20:34.848" endtime="20230726 14:20:34.848"/>
+</iter>
+<status status="PASS" starttime="20230726 14:20:34.841" endtime="20230726 14:20:34.848"/>
 </for>
-<tag>robot</tag>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${NewList}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230726 14:20:34.848" endtime="20230726 14:20:34.848"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<arg>${NewList}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20230726 14:20:34.854" level="INFO">Length is 0</msg>
+<status status="PASS" starttime="20230726 14:20:34.848" endtime="20230726 14:20:34.854"/>
+</kw>
+<msg timestamp="20230726 14:20:34.854" level="INFO">${diff_list} = None</msg>
+<status status="PASS" starttime="20230726 14:20:34.841" endtime="20230726 14:20:34.854"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${diff_list}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230726 14:20:34.856" endtime="20230726 14:20:34.856"/>
+</kw>
+<tag>khushi</tag>
 <tag>suite</tag>
-<status status="PASS" starttime="20230714 12:35:30.895" endtime="20230714 12:35:30.911"/>
+<status status="PASS" starttime="20230726 14:20:34.836" endtime="20230726 14:20:34.856"/>
 </test>
 <kw name="Close Browser session" library="testcase_common_keywords" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230714 12:35:30.916" endtime="20230714 12:35:33.133"/>
+<status status="PASS" starttime="20230726 14:20:34.865" endtime="20230726 14:20:37.012"/>
 </kw>
-<status status="PASS" starttime="20230714 12:35:30.916" endtime="20230714 12:35:33.133"/>
+<status status="PASS" starttime="20230726 14:20:34.864" endtime="20230726 14:20:37.012"/>
 </kw>
-<status status="PASS" starttime="20230714 12:35:24.710" endtime="20230714 12:35:33.133"/>
+<status status="PASS" starttime="20230726 14:20:28.711" endtime="20230726 14:20:37.012"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">robot</stat>
+<stat pass="1" fail="0" skip="0">khushi</stat>
 <stat pass="1" fail="0" skip="0">suite</stat>
 </tag>
 <suite>

@@ -5,7 +5,19 @@ Suite Teardown      Close Browser session
 #Author     Dhruvi Virani
 Force Tags  suite
 
+*** Keywords ***
+List Difference
+    [Arguments]     ${arg1}     ${arg2}
+    @{NewList}=     Create List     @{arg1}     @{arg2}
+    FOR    ${item}    IN    @{arg1}
+        Remove Values From List    ${NewList}   ${item}
+    END
+    Log To Console    ${NewList}
+    Get Length    ${NewList}
+
+
 *** Test Cases ***
+
 Validate All Categories Button Of Amazon
     [Tags]  Dhruvi
     Click Element   ${logo}
@@ -86,8 +98,11 @@ Validate All Button
 
 Validate Press Keys Keywords
     [Tags]  robot
+    #Set Screenshot Directory    ScreenshotsOfAmazon
     Click Element   ${SearchBar}
     Input Text  ${SearchBar}    Purses
+    Capture Page Screenshot     Sample.png
+    Capture Element Screenshot  ${SearchBar}    dhruvi.png
     Press Keys  ${SearchBar}  RETURN
     Sleep   1
     @{NewList}=     Create List     a   b   c
@@ -103,3 +118,11 @@ Validate Press Keys Keywords
         Log     the current key is:${i}
         #Log     the current values is:${j}
     END
+    ${var1}=    Run Keyword If  ${NewList}!=${LIST2}    Log to Console  Successful
+
+Compare Two Lists
+    [Tags]  khushi
+    ${Result}=  Create List     a   b   c
+    ${Result1}=     Create List     a   b   c    
+    ${diff_list}=    List Difference    ${Result}  ${Result1}
+    Log To Console  ${diff_list}
