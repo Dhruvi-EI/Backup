@@ -1,0 +1,17 @@
+log_file="Analysis_Results.log"
+project_name="C:/Users/158410/PycharmProjects/pythonProject/ExcelLogProject"
+excel_output="output.xlsx"
+data_file="Datalog.txt"
+data_file1="remove.txt"
+data_file2="set.txt"
+data_file3="clear.txt"
+data_file4="confirmedByUser.txt"
+list1=["event remove","event set","event clear","confirmed by user"]
+list2=[]
+filenames=[data_file]
+results1=[]
+dict1={}
+dict2={}
+dict3={}
+dict4={}
+list6=[]
